@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+  
+<!DOCTYPE mapper PUBLIC   
+    "-//mybatis.org//DTD Mapper 3.0//EN"  
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+  
+<mapper namespace="com.firstLink.dao.IRoleDao">  
+	<resultMap type="RoleInfo" id="RoleMap">
+		<id property="fRoleId" column="FRoleId" />
+		<result property="fRoleName" column="FRoleName" />
+		<result property="fCrDate" column="FCrDate" />
+		<result property="fCrUserId" column="FCrUserId" />
+		<result property="fMemo" column="FMemo" />
+	</resultMap>
+    <select id="selectAll"  resultMap="RoleMap">  
+        select * from NI_Role
+    </select>  
+</mapper>  
