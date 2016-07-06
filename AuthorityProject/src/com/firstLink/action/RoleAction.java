@@ -14,7 +14,9 @@ public class RoleAction {
     List<?> roleList;
     
     public String selectAll(){
+
 		int b = 2;
+
         roleList=roleService.selectAll();
         System.out.println(roleList.size()+"---");
         return "success";
